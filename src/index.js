@@ -112,6 +112,7 @@ class IframeResizer extends React.Component {
         className={className}
         style={style}
         onLoad={this.onLoad}
+        {...this.props.iFrameOptions}
       />
     );
   }
@@ -137,6 +138,7 @@ IframeResizer.propTypes = {
   frameBorder: PropTypes.number,
   className: PropTypes.string,
   style: PropTypes.object,
+  iFrameOptions: PropTypes.object,
   // optional extra callback when iframe is loaded
   // onIframeLoaded: PropTypes.func,
 };
